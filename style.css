@@ -3,3 +3,47 @@
 .site-header+main{} 
 .html-test{}
 
+
+
+/* Visual refinement: calm spacing, deliberate emphasis, softened controls */
+.display,
+.heading-accent { color: var(--pink); }
+.hero { padding: clamp(96px, 13vw, 180px) 0 clamp(88px, 10vw, 132px); }
+section { padding: clamp(72px, 9vw, 116px) 0; }
+.section-head { gap: clamp(32px, 6vw, 76px); margin-bottom: clamp(38px, 6vw, 66px); }
+.lead { max-width: 680px; opacity: .88; }
+.section-head p,
+.item p,
+.item li,
+.list { opacity: .72; }
+.actions { gap: 16px; margin-top: 38px; }
+.btn {
+  border-radius: 999px;
+  padding: 14px 23px;
+  letter-spacing: .01em;
+  box-shadow: 0 10px 30px rgba(4,8,17,.18);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.btn.alt {
+  border-color: rgba(169,229,154,.55);
+  background: rgba(169,229,154,.07);
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(4,8,17,.28);
+}
+.notice,
+input,
+textarea,
+select { border-radius: 16px; }
+.notice { padding: 24px 28px; }
+input, textarea, select { background: rgba(11,20,36,.48); }
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid rgba(243,182,199,.45);
+  outline-offset: 3px;
+}
+@media (max-width: 800px) {
+  .hero { padding: 78px 0 86px; }
+  section { padding: 64px 0; }
+  .navlinks { gap: 14px 18px; }
+}
